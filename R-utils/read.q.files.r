@@ -35,7 +35,8 @@ read.q.files <<- function( datum
    soil.depth = datum$soil.depth
    soil.dry   = datum$soil.dry
    soil.poro  = datum$soil.poro
-   soilcp     = datum$soil.prop$soilcp
+   # soilcp     = datum$soil.prop$soilcp
+   soilcp     = rep(datum$soil.prop$soilcp,nzg)
    slmsts     = datum$soil.prop$slmsts
    ka         = datum$ka
    kz         = datum$kz
@@ -110,7 +111,10 @@ read.q.files <<- function( datum
       h5file.bz2   = paste(datum$input[m],"bz2",sep=".")
       h5file.gz    = paste(datum$input[m],"gz" ,sep=".")
       if (file.exists(h5file)){
-         mymont    = hdf5load(file=h5file,load=FALSE,verbosity=0,tidy=TRUE)
+         # mymont    = hdf5load(file=h5file,load=FALSE,verbosity=0,tidy=TRUE)
+         mymont    = lapply(h5read_opt(h5file),FUN=aperm)
+         names(mymont) <- gsub(x = names(mymont), pattern = "\\_", replacement = ".")
+
 
       }else if(file.exists(h5file.bz2)){
          temp.file = file.path(tempdir(),basename(h5file))

@@ -11,7 +11,9 @@ create.monthly <<- function(ntimes,montha,yeara,inpref,slz.min){
    h5first.bz2  = paste(inpref,"-Q-",cyear,"-",cmonth,"-00-000000-g01.h5.bz2",sep="")
    h5first.gz   = paste(inpref,"-Q-",cyear,"-",cmonth,"-00-000000-g01.h5.gz" ,sep="")
    if ( file.exists(h5first) ){
-      mymont    = hdf5load(file=h5first,load=FALSE,verbosity=0,tidy=TRUE)
+      # mymont    = hdf5load(file=h5first,load=FALSE,verbosity=0,tidy=TRUE)
+      mymont    = lapply(h5read_opt(h5first),FUN=aperm)
+      names(mymont) <- gsub(x = names(mymont), pattern = "\\_", replacement = ".")
 
    }else if ( file.exists(h5first.bz2) ){
       temp.file = file.path(tempdir(),basename(h5first))

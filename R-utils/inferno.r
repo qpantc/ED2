@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------------------#
 #   Function that re-creates QGIS "inferno" colour scheme.                                 #
 #------------------------------------------------------------------------------------------#
-inferno <<- function(n,sat=1.00){
+inferno <- function(n,sat=1.00){
    rrr   = c(  16,  40, 102, 161, 214, 248, 252, 252)*sat #- Red --------------------------#
    ggg   = c(   0,   6,  12,  38,  71, 125, 194, 255)*sat #- Green ------------------------#
    bbb   = c(  42,  85, 112,  99,  61,   0,   0, 159)*sat #- Blue -------------------------#
@@ -22,7 +22,7 @@ inferno <<- function(n,sat=1.00){
 #------------------------------------------------------------------------------------------#
 #   Function that re-creates QGIS "inferno" colour scheme, but in inverse order.           #
 #------------------------------------------------------------------------------------------#
-iinferno <<- function(n,sat=1.00){
+iinferno <- function(n,sat=1.00){
    mycolsch = rev(inferno(n,sat=sat))
    return(mycolsch)
 }#end function iatlas

@@ -239,10 +239,11 @@ loaded.package[["fields"      ]] = discreet.require(fields      )
 loaded.package[["gbm"         ]] = discreet.require(gbm         )
 loaded.package[["gdalUtils"   ]] = discreet.require(gdalUtils   )
 loaded.package[["geoR"        ]] = discreet.require(geoR        )
-loaded.package[["gpclib"      ]] = discreet.require(gpclib      )
+# loaded.package[["gpclib"      ]] = discreet.require(gpclib      )
 loaded.package[["grDevices"   ]] = discreet.require(grDevices   )
 loaded.package[["gstat"       ]] = discreet.require(gstat       )
-loaded.package[["hdf5"        ]] = discreet.require(hdf5        )
+# loaded.package[["hdf5"        ]] = discreet.require(hdf5        )
+loaded.package[["rhdf5"       ]] = discreet.require(rhdf5        )
 loaded.package[["Hmisc"       ]] = discreet.require(Hmisc       )
 loaded.package[["klaR"        ]] = discreet.require(klaR        )
 loaded.package[["kriging"     ]] = discreet.require(kriging     )
@@ -342,8 +343,8 @@ try(unlockBinding("RGB",envir),silent=TRUE)
 #  SHADY BUSINESS...  We must unlock tobin from package survival and replace by our        #
 # function.                                                                                #
 #------------------------------------------------------------------------------------------#
-envir = as.environment("package:survival")
-try(unlockBinding("tobin",envir),silent=TRUE)
+# envir = as.environment("package:survival")
+# try(unlockBinding("tobin",envir),silent=TRUE)
 #------------------------------------------------------------------------------------------#
 
 
@@ -352,8 +353,8 @@ try(unlockBinding("tobin",envir),silent=TRUE)
 #  SHADY BUSINESS...  We must unlock pspline from package survival and replace by our      #
 # function.                                                                                #
 #------------------------------------------------------------------------------------------#
-envir = as.environment("package:survival")
-try(unlockBinding("pspline",envir),silent=TRUE)
+# envir = as.environment("package:survival")
+# try(unlockBinding("pspline",envir),silent=TRUE)
 #------------------------------------------------------------------------------------------#
 
 
@@ -362,8 +363,8 @@ try(unlockBinding("pspline",envir),silent=TRUE)
 #  SHADY BUSINESS...  We must unlock theme from package ggplot2 and replace by our         #
 # function.                                                                                #
 #------------------------------------------------------------------------------------------#
-envir = as.environment("package:ggplot2")
-try(unlockBinding("theme",envir),silent=TRUE)
+# envir = as.environment("package:ggplot2")
+# try(unlockBinding("theme",envir),silent=TRUE)
 #------------------------------------------------------------------------------------------#
 
 
@@ -372,8 +373,8 @@ try(unlockBinding("theme",envir),silent=TRUE)
 #  SHADY BUSINESS...  We must unlock %>% from package forecast and replace by our          #
 # function.                                                                                #
 #------------------------------------------------------------------------------------------#
-envir = as.environment("package:forecast")
-try(unlockBinding("%>%",envir),silent=TRUE)
+# envir = as.environment("package:forecast")
+# try(unlockBinding("%>%",envir),silent=TRUE)
 #------------------------------------------------------------------------------------------#
 
 
