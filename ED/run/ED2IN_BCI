@@ -374,8 +374,8 @@ $ED_NL
    ! SFILOUT -- Path and prefix for history files.                                         !
    !---------------------------------------------------------------------------------------!
 
-   NL%FFILOUT = '/scratch/gent/vo/000/gvo00074/vsc44253/ED_results/BCI/analy/analysis'
-   NL%SFILOUT = '/scratch/gent/vo/000/gvo00074/vsc44253/ED_results/BCI/histo/history'
+   NL%FFILOUT = '/scratch/gent/vo/000/gvo00074/vsc44253/Results/ED2/BCI/analy/analysis'
+   NL%SFILOUT = '/scratch/gent/vo/000/gvo00074/vsc44253/Results/ED2/BCI/histo/history'
 
    !---------------------------------------------------------------------------------------!
 
