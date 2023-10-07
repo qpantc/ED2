@@ -9,6 +9,6 @@ ml purge ; ml intel-compilers/2021.4.0 HDF5/1.12.1-iimpi-2021b UDUNITS/2.2.28-GC
 #ml HDF5/1.10.1-foss-2018a
 
 # cd /user/scratchkyukon/gent/gvo000/gvo00074/felicien/ED2.2model/ED2/ED/run
-cd /scratch/gent/vo/000/gvo00074/vsc44253/ED2.2/ED2/ED/run
+cd /scratch/gent/vo/000/gvo00074/vsc44253/ED2.2/ED2/run
 #../build/ed_2.2-dbg-master-ddc9f86 -f ED2IN_history
 /scratch/gent/vo/000/gvo00074/vsc44253/ED2.2/ED2/ED/build/ed_2.2-opt-master-ff74db25 -f ED2IN_BCI
