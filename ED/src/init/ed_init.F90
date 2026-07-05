@@ -407,6 +407,9 @@ module ed_init
       case (1,2,3,6)
          !----- Initialize with ED1-type restart information. -----------------------------!
          write(unit=*,fmt='(a,i3.3)') ' + Initializing from ED restart file. Node: ',mynum
+         ! unit=*：表示输出的目标位置。星号 * 是一个缺省值，意思是标准输出（通常就是你的电脑屏幕）。
+         ! fmt='(a,i3.3)'：这是格式化字符串（Format），用来规定后面数据的显示样貌。
+         ! 
          call read_ed10_ed20_history_file
          select case (ibigleaf)
          case (1)
